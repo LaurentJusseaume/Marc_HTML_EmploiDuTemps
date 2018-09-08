@@ -14,6 +14,17 @@
 	<h1>Emploi du temps des cours de Thomas, Marc et Paul</h1>
 
 	<h3 >Sa = Semaine a &nbsp &nbsp &nbsp &nbsp &nbsp &nbspSb = Semaine b</h3>
+        <?php
+            $ddate= date('Y-m-d');
+            $date = new DateTime($ddate);
+            $week = $date->format("W");
+	    echo "<h3>numero de semaine: $week</h3>";
+	    if($week%2==0){
+	      echo "<h3>semaine a</h3>";
+	    }else{
+	      echo "<h3>semaine b</h3>";
+            }
+          ?>
 
 	<table class="Thomas">
 
@@ -62,17 +73,22 @@
 			<td>Allemand</td>
 			<td>Philo</td>
 			<td>Maths</td>
-			<td></td>
+			<td>***</td>
 		</tr>
 		<tr>
 			<td>midi</td>
+                        <td>***</td>
+                        <td>***</td>	
+                        <td>***</td>
+                        <td>***</td>
+                        <td>***</td>
 		</tr>
 		<tr>
 			<td>13h45/14h40</td>
 
 			<td>Espagnol</td>
 			<td>TP</td>
-			<td></td>
+			<td>***</td>
 			<td>SPE</td>
 			<td>Philo</td>
 		</tr>
@@ -81,7 +97,7 @@
 
 			<td>Maths</td>
 			<td>TP</td>
-			<td></td>
+			<td>***</td>
 			<td>SPE</td>
 			<td>Allemand</td>
 		</tr>
@@ -90,7 +106,7 @@
 
 			<td>Physique</td>
 			<td>TP</td>
-			<td></td>
+			<td>***</td>
 			<td>Physique</td>
 			<td>Anglais</td>
 		</tr>
@@ -99,9 +115,9 @@
 
 			<td>Educ civique</td>
 			<td>TP</td>
-			<td></td>
-			<td></td>
-			<td></td>
+			<td>***</td>
+			<td>***</td>
+			<td>***</td>
 		</tr>
 	</table>
 
@@ -355,5 +371,6 @@
 			<td></td>
 		</tr>
 	</table>
+	
 </body>
 </html>
